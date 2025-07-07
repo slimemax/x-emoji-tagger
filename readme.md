@@ -10,15 +10,39 @@ This is a minimalist browser extension that adds custom emojis next to usernames
   - Timeline posts
   - Replies
   - Profile header
-- Match by handle (case-insensitive, no `@`)
+- Match by handle (case-insensitive, no `@`, underscores ignored)
 - Lightweight and CSP-safe
-- Works in Firefox **and** Chrome
+- Works in **Firefox** and **Chrome**
 
 ---
 
-### 🔧 Customize
+### 🧪 Local Install
 
-Edit `emojiTagger.js` and update the `emojiMap` like so:
+#### 🦊 Firefox
+
+- 🧩 Download: [`x-emoji-tagger.xpi`](./x-emoji-tagger.xpi)
+- Go to: `about:addons`
+- Click ⚙️ → **Install Add-on From File**
+- Select the `.xpi` file
+
+Or for **temporary installs** (dev testing):
+
+1. Open `about:debugging` → **This Firefox**
+2. Click **Load Temporary Add-on**
+3. Select `manifest.json`
+
+#### 🧩 Chrome
+
+- 🧩 Download: [`chromedd.crx`](./chromedd.crx)
+- Open `chrome://extensions`
+- Turn on **Developer Mode**
+- Drag-and-drop the `.crx` file into the window
+
+---
+
+### ✏️ Customize
+
+Edit `emojiTagger.js` and update the emoji map:
 
 ```js
 const emojiMap = {
@@ -29,40 +53,24 @@ const emojiMap = {
 };
 ````
 
-Handles are matched lowercase and underscores are ignored.
+Handles are matched in lowercase; underscores and casing are ignored.
 
 ---
 
-### 🦊 Install in Firefox (Temporary)
+### 🛠️ Build Instructions
 
-1. Go to `about:debugging` → **This Firefox**
-2. Click **Load Temporary Add-on**
-3. Select the `manifest.json` file in this folder
+* Firefox `.xpi`: built using [web-ext sign](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/)
+* Chrome `.crx`: built using [`crx3`](https://github.com/ahwayakchih/crx3)
 
----
-
-### 🧪 Install in Chrome (Local)
-
-1. Open `chrome://extensions`
-2. Turn on **Developer Mode**
-3. Drag and drop the prebuilt file:
-   `chromedd.crx`
-   *(found in this repo)*
-
----
-
-### 🛠️ Manual Build
-
-If you're modifying the extension and want to rebuild the `.crx`:
-
-1. Create a `.zip` of the extension contents
-2. Use the [crx3 tool](https://github.com/ahwayakchih/crx3) to package it
-3. Or ask ChatGPT to walk you through it again :)
+Ask ChatGPT for the full build pipeline script if needed.
 
 ---
 
 ### 🧙 License
 
-MIT. Go wild.
+MIT. Customize freely.
+
+```
+
 
 

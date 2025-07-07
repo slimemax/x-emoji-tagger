@@ -46,7 +46,7 @@ Handles are matched lowercase and underscores are ignored.
 1. Open `chrome://extensions`
 2. Turn on **Developer Mode**
 3. Drag and drop the prebuilt file:
-   `x-emoji-tagger.crx`
+   `chromedd.crx`
    *(found in this repo)*
 
 ---

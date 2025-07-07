@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "X Username Emoji Tagger",
+  "version": "1.0",
+  "description": "Adds emojis next to specific usernames on X.com / Twitter.com",
+  "permissions": [],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://www.x.com/*",
+    "https://twitter.com/*",
+    "https://www.twitter.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://x.com/*",
+        "https://www.x.com/*",
+        "https://twitter.com/*",
+        "https://www.twitter.com/*"
+      ],
+      "js": ["emojiTagger.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "X Emoji Tagger"
+  }
+}
+

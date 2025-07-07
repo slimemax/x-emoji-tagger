@@ -15,7 +15,7 @@
     'lauraloomer': '✡️',
     'charliekirk11': '✡️',
     'jack':            '🍔',
-    '0H0UR1__': '✡️'  // note: key will get normalized
+    '0HOUR1__': '✡️'  // note: key will get normalized
     // add more …
   };
 
